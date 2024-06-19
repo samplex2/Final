@@ -30,7 +30,7 @@ public class scholarshippage extends javax.swing.JFrame {
         initComponents();
         displayDatas();
     }
-     Color navcolor = new Color(255,255,204);
+     Color navcolor = new Color(51,204,255);
      Color hovercolor = new Color (255,204,255);
    public void displayDatas(){
     try{
@@ -59,11 +59,11 @@ public class scholarshippage extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         update = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        p_delete = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         userstable = new javax.swing.JScrollPane();
         scholarshiptable = new javax.swing.JTable();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,18 +80,18 @@ public class scholarshippage extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-student-100.png"))); // NOI18N
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(690, 10, 120, 100);
+        jLabel7.setBounds(570, 30, 120, 100);
 
         currentuser.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         currentuser.setText("Current User");
         jPanel2.add(currentuser);
-        currentuser.setBounds(700, 120, 90, 17);
+        currentuser.setBounds(580, 130, 90, 17);
 
         userid.setText("User ID");
         jPanel2.add(userid);
-        userid.setBounds(700, 140, 36, 14);
+        userid.setBounds(590, 160, 36, 14);
 
-        p_add.setBackground(new java.awt.Color(255, 255, 204));
+        p_add.setBackground(new java.awt.Color(102, 204, 255));
         p_add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 p_addMouseClicked(evt);
@@ -108,12 +108,12 @@ public class scholarshippage extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         jLabel5.setText("ADD");
         p_add.add(jLabel5);
-        jLabel5.setBounds(50, 10, 30, 17);
+        jLabel5.setBounds(30, 10, 30, 17);
 
         jPanel2.add(p_add);
-        p_add.setBounds(10, 60, 170, 40);
+        p_add.setBounds(30, 90, 110, 30);
 
-        update.setBackground(new java.awt.Color(255, 255, 204));
+        update.setBackground(new java.awt.Color(102, 204, 255));
         update.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 updateMouseClicked(evt);
@@ -130,44 +130,10 @@ public class scholarshippage extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         jLabel3.setText("EDIT");
         update.add(jLabel3);
-        jLabel3.setBounds(50, 10, 31, 17);
+        jLabel3.setBounds(30, 10, 31, 17);
 
         jPanel2.add(update);
-        update.setBounds(10, 120, 170, 40);
-
-        p_delete.setBackground(new java.awt.Color(255, 255, 204));
-        p_delete.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                p_deleteMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                p_deleteMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                p_deleteMouseExited(evt);
-            }
-        });
-        p_delete.setLayout(null);
-
-        jLabel9.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
-        jLabel9.setText("DELETE");
-        p_delete.add(jLabel9);
-        jLabel9.setBounds(50, 10, 70, 17);
-
-        jPanel2.add(p_delete);
-        p_delete.setBounds(190, 60, 170, 40);
-
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 51, 51));
-        jLabel2.setText("Back");
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(850, 430, 70, 30);
+        update.setBounds(30, 140, 110, 30);
 
         userstable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -191,20 +157,42 @@ public class scholarshippage extends javax.swing.JFrame {
         userstable.setViewportView(scholarshiptable);
 
         jPanel2.add(userstable);
-        userstable.setBounds(10, 180, 900, 240);
+        userstable.setBounds(10, 180, 760, 240);
+
+        jPanel3.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel3.setLayout(null);
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel2.setText("Back");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabel2);
+        jLabel2.setBounds(10, 0, 60, 30);
+
+        jPanel2.add(jPanel3);
+        jPanel3.setBounds(660, 430, 80, 30);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/scholarship.jpg"))); // NOI18N
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(0, 0, 810, 470);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 940, 470);
+        jPanel2.setBounds(0, 0, 810, 470);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 938, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 808, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
         );
 
         pack();
@@ -275,34 +263,6 @@ public class scholarshippage extends javax.swing.JFrame {
         update.setBackground(navcolor);
     }//GEN-LAST:event_updateMouseExited
 
-    private void p_deleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p_deleteMouseClicked
-        int rowIndex = scholarshiptable.getSelectedRow();
-
-        if (rowIndex < 0) {
-            JOptionPane.showMessageDialog(null, "Please select a data first");
-        } else {
-            TableModel model = scholarshiptable.getModel();
-            Object value = model.getValueAt(rowIndex, 0);
-            String id = value.toString();
-            int a = JOptionPane.showConfirmDialog(null, "Are you sure?");
-            if (a == JOptionPane.YES_OPTION) {
-                dbConnector dbc = new dbConnector();
-                dbc.delete(Integer.parseInt(id));
-                displayData();
-
-            }
-
-        }
-    }//GEN-LAST:event_p_deleteMouseClicked
-
-    private void p_deleteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p_deleteMouseEntered
-        p_delete.setBackground(hovercolor);
-    }//GEN-LAST:event_p_deleteMouseEntered
-
-    private void p_deleteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p_deleteMouseExited
-        p_delete.setBackground(navcolor);
-    }//GEN-LAST:event_p_deleteMouseExited
-
     /**
      * @param args the command line arguments
      */
@@ -344,13 +304,13 @@ public class scholarshippage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel p_add;
-    private javax.swing.JPanel p_delete;
     private javax.swing.JTable scholarshiptable;
     private javax.swing.JPanel update;
     public javax.swing.JLabel userid;

@@ -69,7 +69,6 @@ public class loginform extends javax.swing.JFrame {
                 return true;
            }else{
                return false;
-              
             }
             }else{
           return false;
